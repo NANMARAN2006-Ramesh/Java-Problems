@@ -31,7 +31,7 @@ public class InventoryStockManagement {
                 critical++;
             }
 
-            double quantity = 0;
+            int quantity = 0;
             if(status.equals("Adequate")){
                 quantity = 0;
             }
@@ -39,7 +39,7 @@ public class InventoryStockManagement {
                 quantity = (minimumStock-currentStock)+(minimumStock/2);
             }
             else{
-                quantity = (minimumStock-currentStock)+(minimumStock*1.5);
+                quantity = (minimumStock-currentStock)+(minimumStock*(int)1.5);
             }
             totalQuantity+=quantity;
             System.out.println("Product: "+product);
@@ -57,3 +57,4 @@ public class InventoryStockManagement {
         scan.close();
     }
 }
+
