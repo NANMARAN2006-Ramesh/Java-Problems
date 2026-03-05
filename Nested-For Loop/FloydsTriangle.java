@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class FloydsTriangle {
+    public static void main(String[] args) {
+        Scanner s1 = new Scanner(System.in);
+
+        System.out.println("Enter the number of rows, 1 to 10");
+        int rows = s1.nextInt();
+
+        int counter = 1;
+        System.out.println("Floyd's Triangle: ");
+        for(int i=1;i<=rows;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(counter+" ");
+                counter++;
+            }
+            System.out.println();
+        }
+        s1.close();
+    }
+}
